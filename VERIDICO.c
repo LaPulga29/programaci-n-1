@@ -26,21 +26,24 @@ int main() {
 
     do {
         printf("Ingrese la cantidad inicial en stock: ");
-        if (scanf("%d", &stock) != 1) {
-            printf("Solo se permiten numeros.\n");
-            while (getchar() != '\n'); 
-        } else if (stock < 0) {
-            printf("Solo se permiten numeros.\n");
+        scanf("%d", & stock); 
+        if (stock < 1) {
+            printf("Solo se permiten numeros positivos.\n");
+            
+            
+             
         }
-    } while (stock < 0);
+    } while (stock < 1);
 
-    do {
-        printf("Ingrese el precio unitario del producto: ");
-        if (scanf("%f", &precio) != 1) {
-            printf("Solo se permiten numeros.\n");
-            while (getchar() != '\n');
-        } else if (precio <= 0) {
-            printf("Solo se permiten numeros.\n");
+    printf("Ingrese el precio unitario del producto: ");
+    scanf("%f", &precio);
+    do
+    {
+        if (precio <= 0)
+        {
+            printf("No pueden ser valores negativos, intenta de nuevo.\n");
+            printf("Ingrese el precio unitario del producto: ");
+            scanf("%f", &precio);
         }
     } while (precio <= 0);
 
