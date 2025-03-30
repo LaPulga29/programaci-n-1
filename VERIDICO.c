@@ -10,28 +10,14 @@ int main() {
     printf("Ingrese el ID del producto: "); // ID
     scanf("%s", &id);
 
-    do
-    {
-        printf("Ingrese el nombre del producto: "); // NOMBRE
-        scanf("%s", nombre);
-        for (i = 0; nombre[i] != '\0'; i++)
-        {
-            if ((nombre[i] < 'A' || nombre[i] > 'Z') && (nombre[i] < 'a' || nombre[i] > 'z'))
-            {
-                printf("Solo se permiten letras, intente nuevamente.\n");
-                break;
-            }
-        }
-    } while (nombre[i] != '\0');
-
+    printf("Ingrese el nombre del producto: "); // NOMBRE
+    scanf("%s", nombre);
+    
     do {
         printf("Ingrese la cantidad inicial en stock: ");
         scanf("%d", & stock); 
         if (stock < 1) {
             printf("Solo se permiten numeros positivos.\n");
-            
-            
-             
         }
     } while (stock < 1);
 
@@ -63,20 +49,10 @@ int main() {
         case 1: // INGRESAR PRODUCTO
             printf("Ingrese el ID del producto: ");
             scanf("%s", &id);
-            do
-            {
-                printf("Ingrese el nombre del producto: "); // NOMBRE
-                scanf("%s", nombre);
-                for (i = 0; nombre[i] != '\0'; i++)
-                {
-                    if ((nombre[i] < 'A' || nombre[i] > 'Z') && (nombre[i] < 'a' || nombre[i] > 'z'))
-                    {
-                        printf("Solo se permiten letras, intente nuevamente.\n");
-                        break;
-                    }
-                }
-            } while (nombre[i] != '\0');
 
+            printf("Ingrese el nombre del producto: "); // NOMBRE
+            scanf("%s", nombre);
+            
             printf("Ingrese la cantidad inicial en stock: ");
                 scanf("%d", &stock);
                 do{
