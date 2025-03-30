@@ -130,7 +130,6 @@ int main() {
             break;
 
         case 5: // GANANCIAS POR VENTAS
-    
             printf("Total de ganancias: $%.2f\n", total_ganancias);
             break;
 
